@@ -1,0 +1,12 @@
+node_modules
+dist/
+upload/*
+dl/*
+.pm2
+screenshots/*
+app/scrapers/dl/*
+app/scrapers/screenshots/*
+.vscode/launch.json
+.idea/
+out/
+dist/

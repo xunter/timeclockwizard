@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log In - TimeClockWizard</title>
+    <link rel="shortcut icon" href="/img/favicon.png?f=1" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="0f156937db71d2efcf2285a4-text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"4c559b4860","applicationID":"34199849","transactionName":"MVVaNkEADUcEW0VQCQgfdTRwTi9bAlFfegkIREoNXw0GRkpxX10DHg==","queueTime":0,"applicationTime":179,"agent":"","atts":""}</script><script type="0f156937db71d2efcf2285a4-text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"4c559b4860",applicationID:"34199849"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(6),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(y,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1198.min.js"},h=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:w,features:{},xhrWrappable:h,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var x=0},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(7),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,600,700|Open+Sans:400,600" rel="stylesheet" />
+    <link href="/Content/Logincss?v=21.52" rel="stylesheet"/>
+
+
+    <script src="/bundles/jquery?v=21.52" type="0f156937db71d2efcf2285a4-text/javascript"></script>
+
+    <script src="/bundles/en-usjs?v=21.52" type="0f156937db71d2efcf2285a4-text/javascript"></script>
+
+
+
+
+</head>
+<body id="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="login_clockLogo"><img src="/img/logo-wizard-blue.png" alt="" class="img-responsive" /></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                
+
+
+<style>
+    .container {
+        width: 1216px;
+    }
+</style>
+
+<input type="hidden" id="hdnLocation" />
+<input type="hidden" id="hdnIsError" value="Das_C_PlsRefreshLoginPage" />
+<input type="hidden" id="hdnSuccess" />
+<input type="hidden" id="hdnDiffHours" />
+<input type="hidden" id="hdnAllowLocationWiseClockin2" value="0" />
+<input type="hidden" id="hdnAllowPhotoWhenClockin2" value="0" />
+<input type="hidden" id="hdnAllowJobwiseClockin2" />
+<input type="hidden" id="hdnAllowNote2" />
+<input type="hidden" id="hdnRequiredLocation" value="Please select location." />
+<input type="hidden" id="hdnRequiredPhotoCaptured" value="Photo not captured." />
+<input type="hidden" id="hdnRequiredJob" value="Please enter job." />
+<input type="hidden" id="hdnRequiredClockInNotes" value="Please enter note." />
+<input type="hidden" id="hdnRequiredClockOutNotes" value="Please enter note." />
+<input type="hidden" id="hdnRequiredWebCam" value="Please set up webcam." />
+
+<div class="container-fluid">
+    <div class="panel panel-default center-block loginPosition" id="divLoginDesktop" style="padding:69px; float:left;display:none;">
+
+        <h3> Downloadable Time Clock For Desktop</h3>
+        <div class="loginUpdateInfo">Download to any computer to have quick access for clocking in and out. This feature allows employees to clock in using their custom 4 digit code. Your employees’ 4 digit code is located in their employee profile.</div>
+
+        <div class="search-block">
+            <a id="aDesktopVersionLink" class="btn-primary pull-left" href="/Login/ImageDownload?name=Mac" style="margin-right:15px;">
+                <img src="/img/apple (1).png" />
+                Mac OS
+            </a>
+            <a id="aDesktopVersionLink" class="btn-primary" href="/Login/ImageDownload?name=Windows">
+                <img src="/img/windows-8 (1).png" />
+                Windows
+            </a>
+        </div>
+        <div>
+
+
+
+<script src="/bundles/en-usjs?v=21.52" type="0f156937db71d2efcf2285a4-text/javascript"></script>
+
+
+
+
+<form action="/Login/SetCulture" method="post">    <li class="dropdown language-selector">
+        Language:
+        <a class="dropdown-toggle" data-toggle="dropdown" data-close-others="true">
+            <img src="/assets/images/language.png" />
+        </a>
+        <ul class="dropdown-menu" style="width: 125px;">
+            <li class="active">
+                <button name="culture" id="lbl_en-us" value="en-us" type="submit" style="background: #fff; border: none;">
+                    <img src="/assets/images/flag-us1.png" />
+                    <span>English</span>
+                </button>
+            </li>
+            <li>
+                <button name="culture" id="lbl_es" value="es" type="submit" style="background: #fff; border: none;">
+                    <img src="/assets/images/flag-es.png" />
+                    <span>Español</span>
+                </button>
+            </li>
+        </ul>
+    </li>
+<input id="hdnPriviousController" name="hdnPriviousController" type="hidden" value="Login" /><input id="hdnPriviousAction" name="hdnPriviousAction" type="hidden" value="Index" /><input id="hdnPriviousUrl" name="hdnPriviousUrl" type="hidden" value="" /></form>
+
+
+<script type="0f156937db71d2efcf2285a4-text/javascript">
+        $(document).ready(function () {
+            var url = window.location.href; 
+            $('#hdnPriviousUrl').val(url);
+
+            $('.dropdown-toggle').dropdown();
+        })
+</script>
+        </div>
+    </div>
+    <div class="panel panel-default center-block loginPosition ">
+    <div class="panel-header mb20" style="margin:0px;">
+<br />
+        <div class="wpar_logoBliss center-block">
+            <p class="login_text"> <strong> </strong></p>
+        </div>
+    </div>
+
+
+
+        <div class="panel-body">
+
+<form action="/Login" enctype="multipart/form-data" method="post" onsubmit="if (!window.__cfRLUnblockHandlers) return false; return  Login()" data-cf-modified-0f156937db71d2efcf2285a4-=""><input name="__RequestVerificationToken" type="hidden" value="oDQHu7TLQhr1nIhqpTr3JZ2JOi3oXCyMwoA9UhXXwqN3-7FoKTjGrwkdNQV38WNh1cOUvwmY2dqsuD3IC6wHoR_fZKk1" /><input id="Subdomain" name="Subdomain" type="hidden" value="nextmillennium1" /><input data-val="true" data-val-required="The QuickClockInPassword field is required." id="hdnQuickClockInPassword" name="ClientDetails.QuickClockInPassword" type="hidden" value="True" /><input data-val="true" data-val-required="The QuickClockIn field is required." id="hdnQuickClockIn" name="ClientDetails.QuickClockIn" type="hidden" value="True" />                <div class="title mt25">
+                    
+                    <h3>Username</h3>
+                </div>
+                <div class="form-group">
+                    <input class="form-control allborder" id="UserName" name="UserName" placeholder="Username" type="text" value="pavel.nazarov@nextmillennium.io" />
+                    
+                </div>
+                <div class="title mt25">
+                    <h3>Password</h3>
+                </div>
+                <div class="form-group">
+                    <input class="form-control allborder" id="Password" name="Password" placeholder="Password" type="password" />
+                    
+                </div>
+                <div id="all_Wrap_btn" class="all_wrapBtn mt20">
+                    <button type="submit" name="command" value="LogIn" class="btn-primary pull-left">Log In</button>
+
+                    
+
+                    <div class="clearfix"></div>
+                </div>
+</form>            <div class="all_wrapBtn text-center mt20">
+                <div class="not_accaunt">
+                    <a href="/ForgotPassword" id="aForgotPassword" style="text-decoration:none;"> Forgot password ? </a>
+
+
+                        <input type="hidden" id="hdnRequiredSelfRegistrationPin" value="Please enter pin." />
+                        <input type="hidden" id="hdnInvalidSelfRegostrationPin" value="Pin number not match." />
+                        <input type="hidden" id="hdnGoogleSiteKey" value="6LdWgikUAAAAAJ8cSDwB3k1ypUceSuWlYxTY8jmZ" />
+                        <a id="btnSelfRegister"><span>Join This Team</span></a>
+                        <div class="form-group" id="divSelfRegistrationPin" style="display:none; margin-top:10px;">
+                            <div class="col-xs-7">
+                                <input class="form-control allborder" id="txtSelfRegistrationPin" maxlength="20" name="txtSelfRegistrationPin" placeholder="Enter Pin" type="text" value="" />
+                            </div>
+                            <div class="col-xs-3">
+                                <input type="button" id="btnSelfRegistrationPin" class="btn-primary" value="Done" />
+                            </div>
+                        </div>
+<script src="/bundles/jquerymaskmin?v=21.52" type="0f156937db71d2efcf2285a4-text/javascript"></script>
+
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer type="0f156937db71d2efcf2285a4-text/javascript"></script>
+<script src="/bundles/GoogleCaptcha?v=21.52" type="0f156937db71d2efcf2285a4-text/javascript"></script>
+
+
+<input type="hidden" id="hdnRequiredFullName" value="Please enter full name." /> 
+<input type="hidden" id="hdnRequiredUserName" value="Please enter username." /> 
+<input type="hidden" id="hdnRequiredBirthdate" value="Please enter birthdate." />
+    <input type="hidden" id="hdnGoogleCaptcha" value="Please check the box to verify you are not a robot." />
+    <input type="hidden" id="hdnExistsUserName" value="Username/Email address already exists." />
+    <input type="hidden" id="hdnExistsEmail" value="Username/Email address already exists." />
+    <input type="hidden" id="hdnSuccessfullyRegistration" value="Self Registration completed. Please wait for your manager to approve you before you can log in." />
+    <input type="hidden" id="hdnValidBirthDate" value="Please enter valid birthdate."/>
+    <input type="hidden" id="hdnGoogleSiteKey" value="6LdWgikUAAAAAJ8cSDwB3k1ypUceSuWlYxTY8jmZ" />
+    <input type="hidden" id="hdnClientID" />
+    <input type="hidden" id="hdnStatus" />
+    <input type="hidden" id="hdnSubdomain" />
+    <div id="modelSelfRegistration" tabindex="-1" role="dialog" aria-labelledby="addModalEdit" class="modal fade">
+        <div role="document" class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border_none">
+                    <button type="button" data-dismiss="modal" class="close"><img src="/img/esc.svg" alt=""></button>
+                    <h4 class="modal-title">Self Registration</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="title mt20">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control allborder" data-index="1" id="txtFullName" maxlength="25" name="txtFullName" placeholder="Full Name" type="text" value="" />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="title mt20">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control allborder" data-index="2" id="txtEmailaddress" maxlength="50" name="txtEmailaddress" placeholder="Email Address" type="text" value="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="title mt20">
+                            </div>
+                            <div class="sel check_sel">
+                                <input id="chkUserEmailAsUsername" type="checkbox" class="checkbox pull-left" value="true">
+                                <label for="chkUserEmailAsUsername" style="display:inline; float:left;"></label>&nbsp;&nbsp;&nbsp;
+                                Use email address as username
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="title mt20">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control allborder" data-index="4" id="txtUserName" maxlength="100" name="txtUserName" placeholder="Username" type="text" value="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="title mt20">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control allborder" data-index="5" id="txtPassword" maxlength="32" name="txtPassword" placeholder="Password" type="Password" value="" />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="title mt20">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control allborder" data-index="6" id="txtConfirmPassword" maxlength="32" name="txtConfirmPassword" placeholder="Confirm Password" type="Password" value="" />
+                            </div>
+                        </div>
+                    </div>
+                    
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="title mt20">
+        </div>
+        <div id="divCaptcha" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;">
+        </div>
+        <input type="hidden" id="hdnCaptchaResponse" />
+    </div>
+</div>
+            </div>
+<div class="modal-footer  border_none">
+    <input type="button" id="btnSelfRegistration" class="btn-primary col-md-3" value="Register" />
+    <input type="button" style="margin-left: 5px; padding: 11px 30px 12px" id="btnClear" class="btn pull-left col-md-3" value="Clear" />
+    
+</div>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+</div>
+
+
+
+    <div id="divLocationWiseClockinPopup" class="modal fade">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header border_none">
+                    <button type="button" data-dismiss="modal" class="close"><img src="/img/esc.svg" alt="" /></button>
+
+
+                    <h4 class="modal-title"> Clock Out</h4>
+                    <input id="hdnCaptureValue" name="hdnCaptureValue" type="hidden" value="1" />
+                </div>
+                <div class="modal-body">
+                    
+                                            <div class="form-group mt20">
+                            <div class="title">
+                                <h3>Notes</h3>
+                                <textarea class="form-control txt_ar" cols="20" id="txtClockInNote" maxlength="5000" name="txtClockInNote" rows="2"></textarea>
+
+                            </div>
+                        </div>
+                    
+
+
+
+                </div>
+                <div class="modal-footer p0 border_none">
+                        <button type="button" id="btnLocationClockout" class="btn btn-primary pull-left">Clock Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="hdnIsAllowCustomerMan" value="false" />
+    <input type="hidden" id="hdnIsRequiredBillable" value="false" />
+    <input type="hidden" id="hdnISAllowServiceitemMan" value="false" />
+    <input type="hidden" id="hdnISAllowClassMan" value="false" />
+
+<script src="/bundles/LoginIndex?v=21.52" type="0f156937db71d2efcf2285a4-text/javascript"></script>
+
+<script src="https://webrtc.github.io/adapter/adapter-latest.js" type="0f156937db71d2efcf2285a4-text/javascript"></script>
+<script type="0f156937db71d2efcf2285a4-text/javascript">
+
+
+    
+    $(document).ready(function () {
+        localStorage.setItem("logintime24popup", "1");
+        if (!IsMobile()) {
+            $("#divLoginDesktop").show();
+        }
+
+        history.pushState(null, null, location.href);
+        window.onpopstate = function () {
+            history.go(1);
+        };
+    });
+</script>
+
+            </div>
+        </div>
+       
+
+    </div>
+
+    <div id="divLoading"></div>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="0f156937db71d2efcf2285a4-|49" defer=""></script></body>
+</html>
+
+<div id="divPlanPopUpModalLogin" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" class="close"><img src="/img/esc.svg" alt=""></button>
+                <h4 class="modal-title">Your payment did not process.</h4>
+            </div>
+            <div class="modal-body">
+                <p> We were unable to process your payment. Please update your payment information to avoid service interruptions.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<input id="hdn_ClientDateFormat" name="hdn_ClientDateFormat" type="hidden" value="" />
+<input type="hidden" id="hdnAppPath" value="https://apps.timeclockwizard.com" />
+<input type="hidden" id="hdnRequiredEmailAddress" value="Email Address is required." />
+<input type="hidden" id="hdnInvalidEmailFormate" value="Please enter valid email address." />
+<input type="hidden" id="hdnRequiredPassword" value="Please enter password." />
+<input type="hidden" id="hdnRequiredConfirm" value="Please enter confirm password." />
+<input type="hidden" id="hdnPasswordNotSame" value="Current password and new password should not be same." />
+<input type="hidden" id="hdnPasswordNotMatch" value="Your passwords do not match." />
+<input type="hidden" id="hdnPasswordLength" value="Password length should be between 6 to 20 characters." />
+
+<script src="/bundles/LoginlayoutScripts?v=21.52" type="0f156937db71d2efcf2285a4-text/javascript"></script>
+
+
+
